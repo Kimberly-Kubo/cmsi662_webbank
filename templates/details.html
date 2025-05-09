@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {% block title %}Details - LEGO Bank{% endblock %}
+{% block content %}
+
+<div class="details-container">
+  <div class="account-details-card">
+    <h1>Account Details</h1>
+    <div class="account-info-item">
+      <span class="account-info-label">Account Number:</span>
+      <span class="account-info-value">{{account_number}}</span>
+    </div>
+    <div class="account-info-item">
+      <span class="account-info-label">Balance:</span>
+      <span class="account-info-value account-balance"
+        >{{ balance }} LEGO bricks</span
+      >
+    </div>
+    <div class="details-actions">
+      <a href="/dashboard" class="back-link"
+        ><i class="arrow-left"></i> Back to Dashboard</a
+      >
+    </div>
+  </div>
+</div>
+{% endblock %}

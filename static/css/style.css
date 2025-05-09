@@ -1,0 +1,416 @@
+:root {
+  --lego-yellow: #ffd502;
+  --lego-red: #d0021b;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.main-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 8px 16px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header {
+  border-bottom: 3px solid var(--lego-yellow);
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--lego-yellow);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  margin: 0;
+  display: inline-block;
+}
+
+.header p {
+  margin-left: auto;
+  text-align: right;
+}
+
+.header nav {
+  margin-left: auto;
+  margin-right: 20px;
+  text-align: right;
+}
+
+.header nav a {
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  max-height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.alert {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.alert-success {
+  background-color: var(--lego-yellow);
+  color: #333;
+}
+
+.alert-danger {
+  background-color: var(--lego-red);
+  color: white;
+}
+
+.flashes {
+  margin: 20px 0;
+}
+
+.flash {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.flash-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  font-weight: bold;
+}
+
+.flash-error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.btn-cancel {
+  background-color: var(--lego-red);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.transfer-details {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.instructions {
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.error-message {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+  font-weight: bold;
+}
+
+/* Form styling */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form p {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="number"],
+form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+  border-color: var(--lego-yellow);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 213, 2, 0.3);
+}
+
+form input[type="submit"] {
+  background-color: var(--lego-yellow);
+  color: #333;
+  font-weight: bold;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #e6c000;
+}
+
+/* Page titles */
+h2 {
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+form h1 {
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.back-link:hover {
+  background-color: #eee;
+  text-decoration: underline;
+}
+
+/* Dashboard styling */
+.dashboard-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.account-list {
+  margin-bottom: 30px;
+}
+
+.account-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.account-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-number {
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.account-balance {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.account-action {
+  background-color: var(--lego-yellow);
+  color: #333;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.account-action:hover {
+  background-color: #e6c000;
+  text-decoration: none;
+}
+
+.no-accounts {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin: 30px 0;
+}
+
+.dashboard-actions {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.action-button {
+  display: inline-block;
+  background-color: var(--lego-yellow);
+  color: #333;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.action-button:hover {
+  background-color: #e6c000;
+  text-decoration: none;
+}
+
+/* Details page styling */
+.details-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.account-details-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.account-details-card h1 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--lego-yellow);
+  padding-bottom: 15px;
+}
+
+.account-info-item {
+  margin: 20px 0;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.account-info-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.account-info-value {
+  color: #333;
+}
+
+.account-info-value.account-balance {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2b8a3e;
+}
+
+.details-actions {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--lego-yellow);
+  color: #333;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.back-link:hover {
+  background-color: #e6c000;
+  text-decoration: none;
+}
+
+.arrow-left:before {
+  content: "←";
+  margin-right: 8px;
+}

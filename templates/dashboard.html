@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block title %}Dashboard - LEGO Bank{% endblock %}
+{% block content %} {% with messages =
+get_flashed_messages(with_categories=true) %} {% if messages %}
+<div class="flashes">
+  {% for category, message in messages %}
+  <div class="flash flash-{{ category }}">{{ message }}</div>
+  {% endfor %}
+</div>
+{% endif %} {% endwith %}
+
+<div class="dashboard-container">
+  <h2>Your Accounts</h2>
+
+  {% if accounts %}
+  <div class="account-list">
+    {% for account in accounts %}
+    <div class="account-item">
+      <div class="account-info">
+        <div class="account-number">Account #{{ account.id }}</div>
+        <div class="account-balance">{{ account.balance }} LEGO bricks</div>
+      </div>
+      <a href="/details?account={{ account.id }}" class="account-action"
+        >View Details</a
+      >
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="no-accounts">No accounts found.</p>
+  {% endif %}
+
+  <div class="dashboard-actions">
+    <a href="/transfer" class="action-button">Make a Transfer</a>
+  </div>
+</div>
+{% endblock %}

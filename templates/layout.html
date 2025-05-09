@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}LEGO Bank{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <img
+          src="{{ url_for('static', filename='img/brick.png') }}"
+          alt="LEGO Bank Logo"
+          class="logo"
+        />
+        <h1>LEGO Bank</h1>
+        {% if g.user %}
+        <nav>
+          <a href="/dashboard">DASHBOARD</a> |
+          <a href="/logout">LOGOUT</a>
+        </nav>
+        {% endif %}
+        <p>Building Financial Futures Brick by Brick</p>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <main>{% block content %}{% endblock %}</main>
+
+      <footer>
+        <p>&copy; 2025 LEGO Bank</p>
+      </footer>
+    </div>
+  </body>
+</html>

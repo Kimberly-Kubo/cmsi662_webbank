@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {% block title %}Transfer - LEGO Bank{% endblock %}
+{% block content %}
+<h2>Make a Transfer</h2>
+
+<form method="POST" action="/transfer">
+  <div class="form-group">
+    <label for="from">From Account</label>
+    <input
+      type="text"
+      id="from"
+      name="from"
+      placeholder="Enter source account"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="to">To Account</label>
+    <input
+      type="text"
+      id="to"
+      name="to"
+      placeholder="Enter destination account"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="amount">Amount (in LEGO bricks)</label>
+    <input
+      type="number"
+      id="amount"
+      name="amount"
+      placeholder="Enter transfer amount"
+      step="1"
+      min="1"
+      required
+    />
+  </div>
+  <!-- A very important csrf token that prevents an external site from submitting a transfer form on a victim's behalf. -->
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+  <input type="submit" value="Transfer" class="btn" />
+</form>
+
+<p style="text-align: center; margin-top: 20px">
+  <a href="/dashboard" class="back-link">Back to Dashboard</a>
+</p>
+{% endblock %}
