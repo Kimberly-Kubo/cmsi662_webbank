@@ -21,6 +21,7 @@ def get_user_with_credentials(email, password):
     try:
         con = sqlite3.connect('bank.db')
         cur = con.cursor()
+        # Prevent SQL injection by using query parameters
         cur.execute('''
             SELECT email, name, password FROM users where email=?''',
                     (email,))

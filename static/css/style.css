@@ -379,6 +379,7 @@ form h1 {
 }
 
 .account-info-value {
+  font-weight: bold;
   color: #333;
 }
 

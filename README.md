@@ -1,14 +1,16 @@
 # cmsi662_webbank
 
+<img src="static/img/brick.png" alt="lego" width="100">
+
 A banking app for CMSI 662/5999 Homework #5
 
 ## About
 
 This is a Python banking application for the storage and exchange of LEGO. This is the perfect app for LEGO builders who need a secure way to store their bricks.
 
-_Did you know? 40 billion LEGO bricks stacked together would reach the moon_
+> _Did you know? 40 billion LEGO bricks stacked together would reach the moon_
 
-![a lego chest](static/img/lego_chest.jpg)
+![a lego builder](static/img/builder.webp)
 
 ## Security
 
@@ -32,8 +34,10 @@ The app does not reveal whether a username or password is incorrect. Instead, it
 
 The app does not allow users to view other users' account details. If a user tries to access an account they do not own, they will be redirected to their own account page with an error message that does not disclose sensitive information about the account they tried to access.
 
-_Did you know? Two eight-stud bricks can be combined 24 ways_
+> _Did you know? Two eight-stud bricks can be combined 24 ways_
 
 ---
 
 Lego facts are provided by the [Legoland Discovery Center](https://www.legolanddiscoverycenter.com/michigan/post/lego-facts/)
+
+This is a school project and not endorsed by LEGO whatsoever. I just enjoy LEGO, Legoland, and especially the Smokehouse BBQ at Legoland. (They have very good bbq sauce and brisket.)
